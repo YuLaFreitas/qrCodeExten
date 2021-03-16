@@ -1,0 +1,16 @@
+{
+
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "QrCode",
+  "description": "Tenho o escopo de pegar a url e tranformar em um qrcode",
+  "author": "yuri firmo simoes de freitas",
+  "browser_action": {
+    "default_icon": "simb.png",
+    "default_popup": "index.html",
+    "default_title": "QR_CODE",
+    "Content-Security-Policy": "script-src unsafe-inline https://s3-us-west-2.amazonaws.com/; child-src https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/qrcode.js",
+  
+  }
+
+}

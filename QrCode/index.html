@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR CODE</title>
+    
+    <link rel="stylesheet" href="stilos.css"/>
+</head>
+<body onload="rum();">
+
+    <div class="qr-code-generator">
+               
+        <div id="qrcode"></div>
+
+    </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js' ></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/130527/qrcode.js' ></script>
+
+
+    <script>
+        function rum() {
+          
+            // Clear Previous QR Code
+            $('#qrcode').empty();
+
+            // Set Size to Match User Input
+            $('#qrcode').css({
+                'width': $('.qr-size').val(),
+                'height': $('.qr-size').val()
+            })
+
+            // Generate and Output QR Code
+            $('#qrcode').qrcode({
+                width: $('.qr-size').val(), height: $('.qr-size').val(),
+                text: window.location.href
+            });
+
+        }
+
+    </script>
+    
+</body>
+
+</html>
